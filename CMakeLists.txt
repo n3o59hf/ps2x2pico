@@ -26,14 +26,14 @@ pico_generate_pio_header(ps2x2pico ${CMAKE_CURRENT_LIST_DIR}/src/ps2out.pio)
 pico_generate_pio_header(ps2x2pico ${CMAKE_CURRENT_LIST_DIR}/src/ps2in.pio)
 
 ### PS/2 output
-add_compile_definitions(LVOUT=13) # Level shifter pull-up voltage
-add_compile_definitions(KBOUT=11) # Keyboard data pin, clock pin is 12
-add_compile_definitions(MSOUT=14) # Mouse data pin, clock pin is 15
+add_compile_definitions(LVOUT=5) # Level shifter pull-up voltage
+add_compile_definitions(KBOUT=2) # Keyboard data pin, clock pin is 3
+add_compile_definitions(MSOUT=6) # Mouse data pin, clock pin is 7
 
 ### PS/2 input
-add_compile_definitions(LVIN=5) # Level shifter pull-up voltage
-add_compile_definitions(KBIN=3) # Keyboard data pin, clock pin is 4
-add_compile_definitions(MSIN=6) # Mouse data pin, clock pin is 7
+add_compile_definitions(LVIN=13) # Level shifter pull-up voltage
+add_compile_definitions(KBIN=11) # Keyboard data pin, clock pin is 12
+add_compile_definitions(MSIN=14) # Mouse data pin, clock pin is 15
 
 add_compile_definitions(PICO_PANIC_FUNCTION=reset)
 
